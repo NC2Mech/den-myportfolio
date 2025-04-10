@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+h1 {text-align: center;}
+h2 {text-align: center;}
+h2 {color: MediumSeaGreen;}
+p {text-align: center;}
+div {text-align: center;}
+li {text-align: center;}
+ol {text-align: center;}
+ul {text-align: center;}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ePortfolio</title>
+    <link id="themeStylesheet" rel="stylesheet" href="css/theme2.css">
+</head>
+<body> 
+	<header>
+        <h1>My ePortfolio</h1>
+        <button id="themeToggle">Switch Theme</button>
+    </header>
+	
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<h2>THE GALLERY</h2>
+<p>Pictures worth a thousand words</p>
+
+<div class="row">
+  <div class="column">
+    <img src="img_1.jpg" alt="Career" style="width:50%" border="20px solid #555">
+  </div>
+  <div class="column">
+    <img src="img_2.jpg" alt="Lifestyle" style="width:50%" border="20px solid #555">
+  </div>
+  <div class="column">
+    <img src="img_3.jpg" alt="Passion" style="width:50%" border="20px solid #555">
+  </div>
+</div>
+	
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p><strong>
+			HELLO WORLD.</strong> Welcome to my ePortfolio! Here, I document my learning journey and showcase my achievements.</p>
+		</section>
+        <section id="essays">
+            <h2>Essays</h2>
+            <p><a href="docs/my_essay.pdf" target="_blank">Download My Essay</a></p>
+        </section>
+
+        <section id="artwork" class="gallery">
+            <h2>Artwork</h2>
+			<img src="images/art1.jpg" alt="Artwork 1">
+            <img src="images/art2.jpg" alt="Artwork 2">
+        </section>
+
+        <section id="certificates">
+            <h2>Certificates</h2>
+            <p><a href="docs/certificates.pdf" target="_blank">View My Certificates</a></p>
+        </section>
+
+        <section id="reflections">
+            <h2>Reflections</h2>
+            <p>Throughout my journey, I have learned valuable lessons. Here are my thoughts and reflections.</p>
+			<p>"Today, I realized that I got overly focused on the details of a project and missed the bigger picture. Next time, I will make sure to step back and assess the overall goals before diving into the details."</p>
+			<p>"I used to believe that I needed to be perfect to be successful. However, I am now realizing that it is more important to learn from my mistakes and keep trying."</p>
+		</section>
+		
+		<section id="links">
+            <h2>Hyperlinks</h2>
+            <p><a href="https://eleap.unimas.my/login/index.php" target="_blank">Visit UNIMAS</a></p>
+        </section>
+		
+    </div>
+    <script>
+        const themeToggle = document.getElementById("themeToggle");
+        const themeStylesheet = document.getElementById("themeStylesheet");
+
+        themeToggle.addEventListener("click", () => {
+            if (themeStylesheet.getAttribute("href") === "css/theme3.css") {
+                themeStylesheet.setAttribute("href", "css/theme2.css");
+                localStorage.setItem("theme", "light");
+            } else {
+                themeStylesheet.setAttribute("href", "css/theme3.css");
+                localStorage.setItem("theme", "dark");
+            }
+        });
+
+        window.addEventListener("load", () => {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") {
+                themeStylesheet.setAttribute("href", "css/theme2.css");
+            }
+        });
+    </script>
+	<footer>
+		<video width="640" height="480" controls>
+			<source src="movie.mp4" type="video/mp4">
+		</video>
+        
+		<p>Here is a video of my Army Camp at Kota Samarahan, Sarawak</p>
+		
+		<audio controls autoplay muted>
+			<source src="audio.mp3" type="audio/mpeg">
+		</audio>
+		
+		<div style="text-align: center; margin: 20px;">
+		<h2>My Scratch Game</h2>
+		<iframe
+			src="https://scratch.mit.edu/projects/1109675565/embed"
+			allowtransparency="true"
+			width="485"
+			height="402"
+			frameborder="0"
+			scrolling="no"
+			allowfullscreen>
+		</iframe>
+		</div>
+
+    </footer>
+</body>
+</html>
+

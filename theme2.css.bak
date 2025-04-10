@@ -1,0 +1,220 @@
+
+body {
+    font-family: Copperplate, Papyrus, fantasy;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffa07a, #ff8c42);
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <a target="_blank" href="img_1.jpg">
+    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_2.jpg">
+    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+</body>
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.sidebar {
+    background: #ffdab9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar:hover {
+    transform: scale(1.02);
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+    transition: transform 0.2s;
+}
+
+.sidebar nav ul li:hover {
+    transform: translateX(5px);
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #ff8c42;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    color: #ff6b35;
+}
+
+main {
+    background: #ffdab9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+main:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+header {
+    background: linear-gradient(135deg, #ffa07a, #ff8c42);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+header:hover {
+    background: linear-gradient(135deg, #ff8c42, #ff6b35);
+}
+
+h2 {
+    color: #ff6b35;
+    font-size: 22px;
+    text-align: center;
+}
+
+section {
+    margin: 20px 0;
+    background: #ffdab9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+display: block;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 85px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ff8c42;
+    color: white;
+    border-radius: 20px 20px 0 0;
+    transition: background 0.3s ease-in-out;
+}
+
+footer:hover {
+    background: #ff6b35;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #ff4f1f;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
